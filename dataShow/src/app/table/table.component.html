@@ -1,0 +1,33 @@
+
+<!-- ----------------------Table to show data-------------------------------- -->
+<form >
+    <legend style="text-align: center;"><h3>Display Data</h3></legend>
+    <table class="table table-dark table-striped table-bordered container">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Round</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of studentData; track $index) {
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.round}}</td>
+                <td>
+                    <button type="submit" class="btn btn-success m-1"><i class="bi bi-pencil-square" 
+                        routerLink="../update/{{item.id}}"></i><!--Edit--></button>
+                    <button type="submit" class="btn btn-danger m-1" (click)="deleteStData(item.id)">
+                        <i class="bi bi-trash3-fill"></i><!--Delete--></button>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+</form>

@@ -1,0 +1,21 @@
+<div class="container text-center">
+    <h2>Login Here as a Student.</h2>
+</div>
+<div class="container my-1 bg-body-tertiary">
+<form>
+    <!-- id input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="id">Id:</label>
+      <input type="text" id="id" class="form-control" name="id" [(ngModel)]="id" />
+    </div>
+  
+    <!-- name input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="name">Name:</label>
+      <input type="text" id="name" class="form-control" name="name" [(ngModel)]="name"/>
+    </div>
+  
+    <!-- Submit button -->
+    <button  type="button" class="btn btn-primary btn-block mb-4" (click)="stLOgin()">Log In</button>
+  </form>
+</div>
